@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+}
+
+.theme-dark {
+  --bg-primary: theme('colors.gray.900');
+  --text-primary: theme('colors.white');
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(168, 85, 247, 0.3);
+}
+
+.theme-light {
+  --bg-primary: theme('colors.white');
+  --text-primary: theme('colors.gray.900');
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(207, 224, 248, 0.3);
+}
+
+.neural-bg {
+  background-size: 400% 400%;
+}
+
+.neural-bg.theme-dark {
+  background-color: rgb(0, 0, 0);
+}
+
+.neural-bg.theme-light {
+  background-color: rgb(255, 255, 255);
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, 30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.theme-light .animate-blob {
+  --tw-gradient-from: #FCD9DF;
+  --tw-gradient-via: #F5E6EA;
+  --tw-gradient-to: #CFE0F8;
+  opacity: 0.15;
+}

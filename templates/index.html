@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }} - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-icons">
+            <a href="#" class="active"><img src="{{ url_for('static', filename='icons/home.svg') }}" alt="Home"></a>
+            <a href="#"><img src="{{ url_for('static', filename='icons/folder.svg') }}" alt="Projetos"></a>
+            <a href="#"><img src="{{ url_for('static', filename='icons/tool.svg') }}" alt="Habilidades"></a>
+            <a href="#"><img src="{{ url_for('static', filename='icons/layout.svg') }}" alt="Portfolio"></a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="profile-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop" alt="Profile" class="profile-image">
+            <h2>{{ name }}</h2>
+            <p class="role">{{ role }}</p>
+            <p class="location">{{ location }}</p>
+            
+            <div class="social-links">
+                <a href="#"><img src="{{ url_for('static', filename='icons/github.svg') }}" alt="GitHub"></a>
+                <a href="#"><img src="{{ url_for('static', filename='icons/linkedin.svg') }}" alt="LinkedIn"></a>
+                <a href="#"><img src="{{ url_for('static', filename='icons/instagram.svg') }}" alt="Instagram"></a>
+                <a href="#"><img src="{{ url_for('static', filename='icons/mail.svg') }}" alt="Email"></a>
+                <a href="#"><img src="{{ url_for('static', filename='icons/message-circle.svg') }}" alt="Contact"></a>
+            </div>
+
+            <button class="contact-btn">Vamos conversar</button>
+        </div>
+
+        <div class="content">
+            <h1>Transformando suas ideias em <span class="highlight">realidade</span></h1>
+            
+            <p class="description">
+                Apaixonado por desenvolver soluções eficientes e escaláveis,
+                com um talento especial para misturar funcionalidade
+                e design para entregar aplicações impactantes.
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <h3>+{{ stats.experience }}</h3>
+                    <p>ANOS DE<br>EXPERIÊNCIA</p>
+                </div>
+                <div class="stat">
+                    <h3>+{{ stats.projects }}</h3>
+                    <p>PROJETOS<br>CONCLUÍDO</p>
+                </div>
+                <div class="stat">
+                    <h3>+{{ stats.clients }}</h3>
+                    <p>MUNDIALMENTE<br>CLIENTES</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="primary-btn">Entre em contato</button>
+                <button class="secondary-btn">Veja minhas habilidades técnicas 🔥</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="action-buttons">
+        <button class="projects-btn">Ver todos os projetos</button>
+        <button class="experience-btn">Minhas Experiências</button>
+    </div>
+</body>
+</html>
