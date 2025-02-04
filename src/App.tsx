@@ -25,6 +25,24 @@ function App() {
              style={{ animation: 'blob 35s infinite', left: '30%', bottom: '20%' }} />
       </div>
 
+      {/* Right Navigation */}
+      <nav className="fixed bottom-8 right-8 bg-[color:var(--card-bg)] backdrop-blur-lg p-6 rounded-2xl border border-[color:var(--border-color)] z-50">
+        <div className="flex gap-8">
+          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20 bg-purple-500/30">
+            <Brain size={48} className="animate-pulse" />
+          </a>
+          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20">
+            <Robot size={48} />
+          </a>
+          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20">
+            <Network size={48} />
+          </a>
+          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20">
+            <Sparkles size={48} />
+          </a>
+        </div>
+      </nav>
+
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
@@ -41,7 +59,7 @@ function App() {
             alt="Profile"
             className="w-[300px] h-[300px] rounded-full mx-auto mb-8 border-4 border-purple-500/50 hover:border-purple-400 transition-colors"
           />
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent text-center mb-4">Seu Nome</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent text-center mb-4">Iane Victória</h2>
           <p className="text-2xl text-center font-medium mt-2">AI Engineering e Data Science</p>
           <p className="text-xl text-center opacity-80 mt-2">Brasil</p>
           
@@ -57,9 +75,6 @@ function App() {
             </a>
             <a href="#" className="hover:text-purple-400 transition-colors hover:scale-110 transform">
               <Mail size={48} />
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors hover:scale-110 transform">
-              <MessageCircle size={48} />
             </a>
           </div>
 
@@ -123,24 +138,6 @@ function App() {
           </div>
         </div>
       </main>
-
-      {/* Right Navigation */}
-      <nav className="fixed bottom-8 right-8 bg-[color:var(--card-bg)] backdrop-blur-lg p-6 rounded-2xl border border-[color:var(--border-color)] z-50">
-        <div className="flex gap-8">
-          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20 bg-purple-500/30">
-            <Brain size={48} className="animate-pulse" />
-          </a>
-          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20">
-            <Robot size={48} />
-          </a>
-          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20">
-            <Network size={48} />
-          </a>
-          <a href="#" className="p-4 rounded-lg transition-all hover:scale-110 hover:bg-purple-500/20">
-            <Sparkles size={48} />
-          </a>
-        </div>
-      </nav>
     </div>
   );
 }
