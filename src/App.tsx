@@ -55,7 +55,7 @@ function App() {
         <div className="w-full lg:w-[600px] bg-[color:var(--card-bg)] backdrop-blur-lg p-12 rounded-3xl border border-[color:var(--border-color)] relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
           <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=600&fit=crop"
+            src="me.jpeg"
             alt="Profile"
             className="w-[300px] h-[300px] rounded-full mx-auto mb-8 border-4 border-purple-500/50 hover:border-purple-400 transition-colors"
           />
